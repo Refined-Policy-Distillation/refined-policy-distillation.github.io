@@ -57,24 +57,23 @@
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="https://www.linkedin.com/in/juelg/">Tobias Jülg</a><sup></sup>,</span>
               <span class="author-block">
-                <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                <a href="https://www.utn.de/person/wolfram-burgard-2/">Wolfram Burgard</a><sup></sup>,</span>
               <span class="author-block">
-                <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-              </span>
-            </div>
+                <a href="https://www.utn.de/person/prof-dr-florian-walter/">Florian Walter</a><sup></sup></span>
+          </div>
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block">Institution Name<br>Conferance name and year</span>
-              <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+              <span class="author-block">University of Technology Nuremberg</span>
+              <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
             </div>
 
             <div class="column has-text-centered">
               <div class="publication-links">
                 <!-- Arxiv PDF link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                  <a href="https://arxiv.org/pdf/2503.05833" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -83,31 +82,10 @@
                   </a>
                 </span>
 
-                <!-- Supplementary PDF link -->
-                <span class="link-block">
-                  <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                    </span>
-                    <span>Supplementary</span>
-                  </a>
-                </span>
-
-                <!-- Github link -->
-                <span class="link-block">
-                  <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  <a href="https://arxiv.org/abs/2503.05833" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -115,6 +93,28 @@
                     <span>arXiv</span>
                   </a>
                 </span>
+
+                <!-- Supplementary PDF link -->
+                <!-- <span class="link-block">
+                  <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Supplementary</span>
+                  </a>
+                </span> -->
+
+                <!-- Github link -->
+                <!-- <span class="link-block">
+                  <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span> -->
               </div>
             </div>
           </div>
@@ -127,14 +127,14 @@
   <!-- Teaser video-->
   <section class="hero teaser">
     <div class="container is-max-desktop">
-      <div class="hero-body">
-        <video poster="" id="tree" autoplay controls muted loop height="100%">
+      <div class="hero-body" style="text-align: center; position: relative;">
           <!-- Your video here -->
+        <!-- <video poster="" id="tree" autoplay controls muted loop height="100%">
           <source src="static/videos/banner_video.mp4" type="video/mp4">
-        </video>
+        </video> -->
+        <img src="static/images/RPD_Architecture.svg" alt="RPD Architecture" width="100%"/>
         <h2 class="subtitle has-text-centered">
-          Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat
-          pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus.
+          <br>With RPD we distill large VLA policies into efficient expert policies using PPO.
         </h2>
       </div>
     </div>
@@ -149,11 +149,14 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus.
-              Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a
-              vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac
-              gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed
-              vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+              Recent generalist Vision-Language-Action Models (VLAs) can perform a variety of tasks on real robots with remarkable generalization capabilities.
+              However, reported success rates are often not on par with those of expert policies.
+              Moreover, VLAs usually do not work out of the box and often must be fine-tuned as they are sensitive to setup changes.
+              In this work, we present Refined Policy Distillation (RPD), an RL-based policy refinement method that enables the distillation of large generalist models into small, high-performing expert policies.
+              The student policy is guided during the RL exploration by actions of a teacher VLA for increased sample efficiency and faster convergence.
+              Different from previous work that focuses on applying VLAs to real-world experiments, we create fine-tuned versions of Octo and OpenVLA for ManiSkill2 to evaluate RPD in simulation.
+              As our results for different manipulation tasks demonstrate, RPD enables the RL agent to learn expert policies that surpass the teacher's performance in both dense and sparse reward settings.
+              Our approach is even robust to changes in the camera perspective and can generalize to task variations that the underlying VLA cannot solve.
             </p>
           </div>
         </div>
