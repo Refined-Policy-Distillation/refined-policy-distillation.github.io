@@ -62,7 +62,7 @@
                 <a href="https://www.utn.de/person/wolfram-burgard-2/">Wolfram Burgard</a><sup></sup>,</span>
               <span class="author-block">
                 <a href="https://www.utn.de/person/prof-dr-florian-walter/">Florian Walter</a><sup></sup></span>
-          </div>
+            </div>
 
             <div class="is-size-5 publication-authors">
               <span class="author-block">University of Technology Nuremberg</span>
@@ -127,12 +127,11 @@
   <!-- Teaser video-->
   <section class="hero teaser">
     <div class="container is-max-desktop">
-      <div class="hero-body" style="text-align: center; position: relative;">
-          <!-- Your video here -->
-        <!-- <video poster="" id="tree" autoplay controls muted loop height="100%">
+      <div class="hero-body">
+        <!-- Your video here -->
+        <video poster="" id="tree" autoplay controls muted loop height="100%">
           <source src="static/videos/banner_video.mp4" type="video/mp4">
-        </video> -->
-        <img src="static/images/RPD_Architecture.svg" alt="RPD Architecture" width="100%"/>
+        </video>
         <h2 class="subtitle has-text-centered">
           <br>With RPD we distill large VLA policies into efficient expert policies using PPO.
         </h2>
@@ -149,14 +148,21 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Recent generalist Vision-Language-Action Models (VLAs) can perform a variety of tasks on real robots with remarkable generalization capabilities.
+              Recent generalist Vision-Language-Action Models (VLAs) can perform a variety of tasks on real robots with
+              remarkable generalization capabilities.
               However, reported success rates are often not on par with those of expert policies.
-              Moreover, VLAs usually do not work out of the box and often must be fine-tuned as they are sensitive to setup changes.
-              In this work, we present Refined Policy Distillation (RPD), an RL-based policy refinement method that enables the distillation of large generalist models into small, high-performing expert policies.
-              The student policy is guided during the RL exploration by actions of a teacher VLA for increased sample efficiency and faster convergence.
-              Different from previous work that focuses on applying VLAs to real-world experiments, we create fine-tuned versions of Octo and OpenVLA for ManiSkill2 to evaluate RPD in simulation.
-              As our results for different manipulation tasks demonstrate, RPD enables the RL agent to learn expert policies that surpass the teacher's performance in both dense and sparse reward settings.
-              Our approach is even robust to changes in the camera perspective and can generalize to task variations that the underlying VLA cannot solve.
+              Moreover, VLAs usually do not work out of the box and often must be fine-tuned as they are sensitive to
+              setup changes.
+              In this work, we present Refined Policy Distillation (RPD), an RL-based policy refinement method that
+              enables the distillation of large generalist models into small, high-performing expert policies.
+              The student policy is guided during the RL exploration by actions of a teacher VLA for increased sample
+              efficiency and faster convergence.
+              Different from previous work that focuses on applying VLAs to real-world experiments, we create fine-tuned
+              versions of Octo and OpenVLA for ManiSkill2 to evaluate RPD in simulation.
+              As our results for different manipulation tasks demonstrate, RPD enables the RL agent to learn expert
+              policies that surpass the teacher's performance in both dense and sparse reward settings.
+              Our approach is even robust to changes in the camera perspective and can generalize to task variations
+              that the underlying VLA cannot solve.
             </p>
           </div>
         </div>
@@ -165,119 +171,50 @@
   </section>
   <!-- End paper abstract -->
 
+  <!-- Table -->
+  <section class="section hero is-small">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <!-- <h2 class="title is-3">RPD Training Architecture</h2> -->
+          <div class="hero-body">
+            <h2 class="subtitle has-text-centered">
+              Generalist VLA policies are large and even when fine-tuned 
+            </h2>
+            <img src="static/images/table.svg" alt="RPD Architecture" width="100%" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End table -->
 
-  <!-- Image carousel -->
-  <section class="hero is-small">
-    <div class="hero-body">
-      <div class="container">
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="item">
-            <!-- Your image here -->
-            <img src="static/images/carousel1.jpg" alt="MY ALT TEXT" />
+  <!-- Architecture -->
+  <section class="section hero is-small">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3">RPD Training Architecture</h2>
+          <div class="hero-body">
+            <img src="static/images/RPD_Architecture.svg" alt="RPD Architecture" width="100%" />
             <h2 class="subtitle has-text-centered">
-              First image description.
-            </h2>
-          </div>
-          <div class="item">
-            <!-- Your image here -->
-            <img src="static/images/carousel2.jpg" alt="MY ALT TEXT" />
-            <h2 class="subtitle has-text-centered">
-              Second image description.
-            </h2>
-          </div>
-          <div class="item">
-            <!-- Your image here -->
-            <img src="static/images/carousel3.jpg" alt="MY ALT TEXT" />
-            <h2 class="subtitle has-text-centered">
-              Third image description.
-            </h2>
-          </div>
-          <div class="item">
-            <!-- Your image here -->
-            <img src="static/images/carousel4.jpg" alt="MY ALT TEXT" />
-            <h2 class="subtitle has-text-centered">
-              Fourth image description.
+              <br>With RPD we distill large VLA policies into efficient expert policies using PPO.
             </h2>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- End image carousel -->
+  <!-- End architecture -->
 
 
-
-
-  <!-- Youtube video -->
-  <section class="hero is-small is-light">
-    <div class="hero-body">
-      <div class="container">
-        <!-- Paper video. -->
-        <h2 class="title is-3">Video Presentation</h2>
-        <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-
-            <div class="publication-video">
-              <!-- Youtube embed code here -->
-              <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media"
-                allowfullscreen></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End youtube video -->
-
-
-  <!-- Video carousel -->
-  <section class="hero is-small">
-    <div class="hero-body">
-      <div class="container">
-        <h2 class="title is-3">Another Carousel</h2>
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="item item-video1">
-            <video poster="" id="video1" autoplay controls muted loop height="100%">
-              <!-- Your video file here -->
-              <source src="static/videos/carousel1.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-video2">
-            <video poster="" id="video2" autoplay controls muted loop height="100%">
-              <!-- Your video file here -->
-              <source src="static/videos/carousel2.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-video3">
-            <video poster="" id="video3" autoplay controls muted loop height="100%">\
-              <!-- Your video file here -->
-              <source src="static/videos/carousel3.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End video carousel -->
+  <!-- Tasks -->
 
 
 
 
 
 
-  <!-- Paper poster -->
-  <!-- <section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section> -->
-  <!--End paper poster -->
 
 
   <!--BibTex citation -->
