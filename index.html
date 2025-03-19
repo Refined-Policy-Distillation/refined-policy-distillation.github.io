@@ -52,7 +52,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Refined Policy Distillation: From VLA Generalists to RL Experts
+            <h1 class="title is-1 publication-title">Refined Policy Distillation:<br>From VLA Generalists to RL Experts
             </h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
@@ -66,7 +66,6 @@
 
             <div class="is-size-5 publication-authors">
               <span class="author-block">University of Technology Nuremberg</span>
-              <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
             </div>
 
             <div class="column has-text-centered">
@@ -128,12 +127,9 @@
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
-        <!-- Your video here -->
-        <video poster="" id="tree" autoplay controls muted loop height="100%">
-          <source src="static/videos/banner_video.mp4" type="video/mp4">
-        </video>
+        <img src="static/images/RPD_Architecture.svg" alt="RPD Architecture" width="100%" />
         <h2 class="subtitle has-text-centered">
-          <br>With RPD we distill large VLA policies into efficient expert policies using PPO.
+          <br>With RPD we distill and refine large Vision-Language-Action model (VLA) policies into efficient task-expert policies using on-policy Reinforcement Learning.
         </h2>
       </div>
     </div>
@@ -176,12 +172,12 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column">
-          <!-- <h2 class="title is-3">RPD Training Architecture</h2> -->
           <div class="hero-body">
-            <h2 class="subtitle has-text-centered">
-              Generalist VLA policies are large and even when fine-tuned 
-            </h2>
-            <img src="static/images/table.svg" alt="RPD Architecture" width="100%" />
+            <h2 class="title is-3">VLAs are large and show suboptimal performance</h2>
+            <div class="content has-text-justified">
+              Tab. 1: Octo and OpenVLA base- and fine-tuned versions evaluated on different ManiSkill2 tasks for 200 episodes and normalized dense reward.<br>
+            </div>
+              <img src="static/images/table.png" alt="Evaluation performance of Octo and OpenVLA on ManiSkill2 tasks." width="100%">
           </div>
         </div>
       </div>
@@ -189,33 +185,258 @@
   </section>
   <!-- End table -->
 
-  <!-- Architecture -->
+
   <section class="section hero is-small">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column">
-          <h2 class="title is-3">RPD Training Architecture</h2>
+          <h2 class="title is-3">PickCube-v1</h2>
           <div class="hero-body">
-            <img src="static/images/RPD_Architecture.svg" alt="RPD Architecture" width="100%" />
-            <h2 class="subtitle has-text-centered">
-              <br>With RPD we distill large VLA policies into efficient expert policies using PPO.
-            </h2>
+            <div class="content has-text-justified">
+              <p>Octo and OpenVLA fine-tuned (FT) on the ManiSkill2 tasks in Tab. 1, vanilla PPO and RPD both with Octo and OpenVLA after the same number of training steps.</p>
+            </div>
+            <div class="columns is-vcentered interpolation-panel">
+              <div class="column  has-text-centered">
+                <h5><b>FT Octo:</b><br>pick up the cube</h5>
+                <h5 style="font-size:30px;">❌</h5>
+                <video autoplay controls muted loop playsinline width="90%">
+                  <source src="static/videos/pickcube/pickcube_fm_octo.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="column  has-text-centered">
+                <h5><b>FT OpenVLA:</b><br>pick up the cube</h5>
+                <h5 style="font-size:30px;">❌</h5>
+                <video autoplay controls muted loop playsinline width="90%">
+                  <source src="static/videos/pickcube/pickcube_fm_openvla.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="column  has-text-centered">
+                <h5><b>PPO:</b><br>pick up the cube</h5>
+                <h5 style="font-size:30px;">❌</h5>
+                <video autoplay controls muted loop playsinline width="90%">
+                  <source src="static/videos/pickcube/pickcube_ppo.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="column  has-text-centered">
+                <h5><b>RPD on Octo:</b><br>pick up the cube</h5>
+                <h5 style="font-size:30px;">✅</h5>
+                <video autoplay controls muted loop playsinline width="90%">
+                  <source src="static/videos/pickcube/pickcube_rpd_octo.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="column  has-text-centered">
+                <h5><b>RPD on OpenVLA:</b><br>pick up the cube</h5>
+                <h5 style="font-size:30px;">✅</h5>
+                <video autoplay controls muted loop playsinline width="90%">
+                  <source src="static/videos/pickcube/pickcube_rpd_openvla.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <br>
+            <img src="static/images/algos.svg" alt="RPD Variants and Baselines on the pick cube task" width="80%" />
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- End architecture -->
 
+  <section class="section hero is-small is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3">PullCube-v1</h2>
+          <div class="hero-body">
+            <div class="columns is-vcentered interpolation-panel">
+              <div class="column  has-text-centered">
+                <h5><b>FT Octo</b></h5>
+                <h5 style="font-size:30px;">✅</h5>
+                <video autoplay controls muted loop playsinline width="90%">
+                  <source src="static/videos/pullcube/pullcube_fm_octo.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="column  has-text-centered">
+                <h5><b>PPO</b></h5>
+                <h5 style="font-size:30px;">⚠️</h5>
+                <video autoplay controls muted loop playsinline width="90%">
+                  <source src="static/videos/pullcube/pullcube_ppo.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="column  has-text-centered">
+                <h5><b>RPD on Octo</b></h5>
+                <h5 style="font-size:30px;">✅</h5>
+                <video autoplay controls muted loop playsinline width="90%">
+                  <source src="static/videos/pullcube/pullcube_rpd_octo.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section hero is-small is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3">LiftPegUpright-v1</h2>
+          <div class="hero-body">
+            <div class="columns is-vcentered interpolation-panel">
+              <div class="column  has-text-centered">
+                <h5><b>FT Octo</b></h5>
+                <h5 style="font-size:30px;">⚠️</h5>
+                <video autoplay controls muted loop playsinline width="90%">
+                  <source src="static/videos/liftpeg/liftpeg_fm_octo.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="column  has-text-centered">
+                <h5><b>PPO</b></h5>
+                <h5 style="font-size:30px;">⚠️️</h5>
+                <video autoplay controls muted loop playsinline width="90%">
+                  <source src="static/videos/liftpeg/liftpeg_ppo.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="column  has-text-centered">
+                <h5><b>RPD on Octo</b></h5>
+                <h5 style="font-size:30px;">✅</h5>
+                <video autoplay controls muted loop playsinline width="90%">
+                  <source src="static/videos/liftpeg/liftpeg_rpd_octo.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section hero is-small is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3">StackCube-v1</h2>
+          <div class="hero-body">
+            <div class="columns is-vcentered interpolation-panel">
+              <div class="column  has-text-centered">
+                <h5><b>FT Octo</b></h5>
+                <h5 style="font-size:30px;">❌️</h5>
+                <video autoplay controls muted loop playsinline width="90%">
+                  <source src="static/videos/stackcube/stackcube_fm_octo.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="column  has-text-centered">
+                <h5><b>PPO</b></h5>
+                <h5 style="font-size:30px;">❌️️</h5>
+                <video autoplay controls muted loop playsinline width="90%">
+                  <source src="static/videos/stackcube/stackcube_ppo.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="column  has-text-centered">
+                <h5><b>RPD on Octo</b></h5>
+                <h5 style="font-size:30px;">⚠️</h5>
+                <video autoplay controls muted loop playsinline width="90%">
+                  <source src="static/videos/stackcube/stackcube_rpd_octo.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section hero is-small is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3">PushCube-v1</h2>
+          <div class="hero-body">
+            <div class="columns is-vcentered interpolation-panel">
+              <div class="column  has-text-centered">
+                <h5><b>FT Octo</b></h5>
+                <h5 style="font-size:30px;">✅️</h5>
+                <video autoplay controls muted loop playsinline width="90%">
+                  <source src="static/videos/pushcube/pushcube_fm_octo.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="column  has-text-centered">
+                <h5><b>PPO</b></h5>
+                <h5 style="font-size:30px;">⚠️️</h5>
+                <video autoplay controls muted loop playsinline width="90%">
+                  <source src="static/videos/pushcube/pushcube_ppo.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="column  has-text-centered">
+                <h5><b>RPD on Octo</b></h5>
+                <h5 style="font-size:30px;">✅️</h5>
+                <video autoplay controls muted loop playsinline width="90%">
+                  <source src="static/videos/pushcube/pushcube_rpd_octo.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Tasks -->
 
-  <!-- Tasks -->
-
-
-
-
-
-
-
+  <!-- Angle -->
+  <section class="section hero is-small">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3">PushCube-v1 with Change Camera Perspective</h2>
+          <img src="static/images/angle_change.svg" alt="Camera Perspective Change" width="80%" />
+            <div class="content has-text-justified">
+              <p>VLAs often struggle with even small setup changes such as the camera perspective (see below).
+                This makes them challenging to deploy and limits wide spread adaptation.
+                Even though the VLAs drop significant in performance, RPD is still able to extract expert policies, providing a method for closing cross-setup gaps.
+              </p>
+            </div>
+          <div class="hero-body">
+            <div class="columns is-vcentered interpolation-panel">
+              <div class="column  has-text-centered">
+                <h5><b>FT Octo</b></h5>
+                <h5 style="font-size:30px;">❌</h5>
+                <video autoplay controls muted loop playsinline width="90%">
+                  <source src="static/videos/push_angle/push_angle_fm_octo.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="column  has-text-centered">
+                <h5><b>FT OpenVLA</b></h5>
+                <h5 style="font-size:30px;">❌</h5>
+                <video autoplay controls muted loop playsinline width="90%">
+                  <source src="static/videos/push_angle/push_angle_fm_openvla.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="column  has-text-centered">
+                <h5><b>PPO</b></h5>
+                <h5 style="font-size:30px;">❌</h5>
+                <video autoplay controls muted loop playsinline width="90%">
+                  <source src="static/videos/push_angle/push_angle_ppo.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="column  has-text-centered">
+                <h5><b>RPD on Octo</b></h5>
+                <h5 style="font-size:30px;">✅</h5>
+                <video autoplay controls muted loop playsinline width="90%">
+                  <source src="static/videos/push_angle/push_angle_rpd_octo.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="column  has-text-centered">
+                <h5><b>RPD on OpenVLA</b></h5>
+                <h5 style="font-size:30px;">✅</h5>
+                <video autoplay controls muted loop playsinline width="90%">
+                  <source src="static/videos/push_angle/push_angle_rpd_openvla.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <br>
+            <img src="static/images/angle.svg" alt="RPD on Octo and OpenVLA and baseline on changed camera perspective." width="80%" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Angle -->
 
   <!--BibTex citation -->
   <section class="section" id="BibTeX">
