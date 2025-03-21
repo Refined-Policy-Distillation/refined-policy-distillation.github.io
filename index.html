@@ -129,7 +129,8 @@
       <div class="hero-body">
         <img src="static/images/RPD_Architecture.svg" alt="RPD Architecture" width="100%" />
         <h2 class="subtitle has-text-centered">
-          <br>With RPD we distill and refine large Vision-Language-Action model (VLA) policies into efficient task-expert policies using on-policy Reinforcement Learning.
+          <br>With RPD we distill and refine large Vision-Language-Action model (VLA) policies into efficient
+          task-expert policies using on-policy Reinforcement Learning.
         </h2>
       </div>
     </div>
@@ -175,9 +176,11 @@
           <div class="hero-body">
             <h2 class="title is-3">VLAs are large and show suboptimal performance</h2>
             <div class="content has-text-justified">
-              Tab. 1: Octo and OpenVLA base- and fine-tuned versions evaluated on different ManiSkill2 tasks for 200 episodes and normalized dense reward.<br>
+              Tab. 1: Octo and OpenVLA base- and fine-tuned versions evaluated on different ManiSkill2 tasks for 200
+              episodes and normalized dense reward.<br>
             </div>
-              <img src="static/images/table.png" alt="Evaluation performance of Octo and OpenVLA on ManiSkill2 tasks." width="100%">
+            <img src="static/images/table.png" alt="Evaluation performance of Octo and OpenVLA on ManiSkill2 tasks."
+              width="100%">
           </div>
         </div>
       </div>
@@ -193,7 +196,8 @@
           <h2 class="title is-3">PickCube-v1</h2>
           <div class="hero-body">
             <div class="content has-text-justified">
-              <p>Octo and OpenVLA fine-tuned (FT) on the ManiSkill2 tasks in Tab. 1, vanilla PPO and RPD both with Octo and OpenVLA after the same number of training steps.</p>
+              <p>Octo and OpenVLA fine-tuned (FT) on the ManiSkill2 tasks in Tab. 1, vanilla PPO and RPD both with Octo
+                and OpenVLA after the same number of training steps.</p>
             </div>
             <div class="columns is-vcentered interpolation-panel">
               <div class="column  has-text-centered">
@@ -385,12 +389,13 @@
         <div class="column">
           <h2 class="title is-3">PushCube-v1 with Change Camera Perspective</h2>
           <img src="static/images/angle_change.svg" alt="Camera Perspective Change" width="80%" />
-            <div class="content has-text-justified">
-              <p>VLAs often struggle with even small setup changes such as the camera perspective (see below).
-                This makes them challenging to deploy and limits wide spread adaptation.
-                Even though the VLAs drop significant in performance, RPD is still able to extract expert policies, providing a method for closing cross-setup gaps.
-              </p>
-            </div>
+          <div class="content has-text-justified">
+            <p>VLAs often struggle with even small setup changes such as the camera perspective (see below).
+              This makes them challenging to deploy and limits wide spread adaptation.
+              Even though both VLAs experience a significant drop in performance, RPD is still able to extract expert
+              policies, providing a method for closing cross-setup gaps.
+            </p>
+          </div>
           <div class="hero-body">
             <div class="columns is-vcentered interpolation-panel">
               <div class="column  has-text-centered">
@@ -430,7 +435,8 @@
               </div>
             </div>
             <br>
-            <img src="static/images/angle.svg" alt="RPD on Octo and OpenVLA and baseline on changed camera perspective." width="80%" />
+            <img src="static/images/angle.svg" alt="RPD on Octo and OpenVLA and baseline on changed camera perspective."
+              width="80%" />
           </div>
         </div>
       </div>
@@ -470,10 +476,20 @@
     </div>
   </footer>
 
-  <!-- Statcounter tracking code -->
-
-  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
+  <!-- Default Statcounter code for Refined Policy Distillation
+https://refined-policy-distillation.github.io/ -->
+  <script type="text/javascript">
+    var sc_project = 13106133;
+    var sc_invisible = 1;
+    var sc_security = "8619b863"; 
+  </script>
+  <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+  <noscript>
+    <div class="statcounter"><a title="Web Analytics Made Easy -
+Statcounter" href="https://statcounter.com/" target="_blank"><img class="statcounter"
+          src="https://c.statcounter.com/13106133/0/8619b863/1/" alt="Web Analytics Made Easy - Statcounter"
+          referrerPolicy="no-referrer-when-downgrade"></a></div>
+  </noscript>
   <!-- End of Statcounter Code -->
 
 </body>
