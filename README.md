@@ -3,16 +3,14 @@
 This is the repository that contains source code for the [RPD website](https://refined-policy-distillation.github.io/).
 
 
-If you find RPD useful for your work please cite:
+If you find RPD useful for your work, please consider citing it:
 ```
-@misc{juelg2025refinedpolicydistillationvla,
+@inproceedings{juelg2025refinedpolicydistillationvla,
     title={{Refined Policy Distillation}: {F}rom {VLA} Generalists to {RL} Experts}, 
     author={Tobias Jülg and Wolfram Burgard and Florian Walter},
     year={2025},
-    eprint={2503.05833},
-    archivePrefix={arXiv},
-    primaryClass={cs.RO},
-    url={https://arxiv.org/abs/2503.05833}
+    booktitle={Proc.~of the IEEE/RSJ Int.~Conf.~on Intelligent Robots and Systems (IROS)},
+    note={Accepted for publication.}
 }
 ```
 
