@@ -154,21 +154,14 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Recent generalist Vision-Language-Action Models (VLAs) can perform a variety of tasks on real robots with
-              remarkable generalization capabilities.
-              However, reported success rates are often not on par with those of expert policies.
-              Moreover, VLAs usually do not work out of the box and often must be fine-tuned as they are sensitive to
-              setup changes.
-              In this work, we present Refined Policy Distillation (RPD), an RL-based policy refinement method that
-              enables the distillation of large generalist models into small, high-performing expert policies.
-              The student policy is guided during the RL exploration by actions of a teacher VLA for increased sample
-              efficiency and faster convergence.
-              Different from previous work that focuses on applying VLAs to real-world experiments, we create fine-tuned
-              versions of Octo and OpenVLA for ManiSkill2 to evaluate RPD in simulation.
-              As our results for different manipulation tasks demonstrate, RPD enables the RL agent to learn expert
-              policies that surpass the teacher's performance in both dense and sparse reward settings.
-              Our approach is even robust to changes in the camera perspective and can generalize to task variations
-              that the underlying VLA cannot solve.
+              Vision-Language-Action Models (VLAs) have demonstrated remarkable generalization capabilities in real-world experiments.
+              However, their success rates are often not on par with expert policies, and they require fine-tuning when the setup changes.
+              In this work, we introduce <i>Refined Policy Distillation</i> (RPD), a novel Reinforcement Learning (RL)-based <i>policy refinement</i> method that bridges this performance gap through a combination of on-policy RL with behavioral cloning.
+              The core idea of RPD is to distill and refine VLAs into compact, high-performing expert policies by guiding the student policy during RL exploration using the actions of a teacher VLA, resulting in increased sample efficiency and faster convergence.
+              We complement our method by fine-tuned versions of Octo and OpenVLA for ManiSkill3 to evaluate RPD in simulation.
+              While this is a key requirement for applying RL, it also yields new insights beyond existing studies on VLA performance in real-world settings.
+              Our experimental results across various manipulation tasks show that RPD enables the RL student to learn expert policies that outperform the VLA teacher in both dense and sparse reward settings, while also achieving faster convergence than the RL baseline.
+              Our approach is even robust to changes in camera perspective and can generalize to task variations that the underlying VLA cannot solve. Our code, dataset, VLA checkpoints, and videos are linked on this website.
             </p>
           </div>
         </div>
